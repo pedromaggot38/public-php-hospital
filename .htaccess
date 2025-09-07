@@ -1,0 +1,25 @@
+# Ativa o motor de reescrita de URL do Apache
+RewriteEngine On
+
+# Impede que os usuários possam listar o conteúdo das pastas
+Options -Indexes
+
+# ----------------------------------------------------
+# SEÇÃO 1: REGRAS ESPECÍFICAS PARA NOTÍCIAS
+# ----------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^noticias/?$ noticias.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^noticias/([a-zA-Z0-9-]+)/?$ noticia.php?slug=$1 [L,QSA]
+
+
+# ----------------------------------------------------
+# SEÇÃO 2: REGRAS GERAIS PARA REMOVER EXTENSÃO .PHP
+# ----------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]

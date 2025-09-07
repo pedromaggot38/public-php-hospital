@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHBM Hospital de Maracaí</title>
+    <link rel="icon" type="image/x-icon" href="/public/logo.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i data-feather="heart" class="text-red-600 mr-2"></i>
+                <h1 class="text-xl font-bold text-gray-800">AHB Maracaí</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="/" class="text-red-600 font-medium">Início</a>
+                <a href="/sobre.php" class="text-gray-600 hover:text-red-600">Sobre</a>
+                <a href="/noticias.php" class="text-gray-600 hover:text-red-600">Notícias</a>
+                <a href="/medicos.php" class="text-gray-600 hover:text-red-600">Médicos</a>
+                <a href="/servicos.php" class="text-gray-600 hover:text-red-600">Serviços</a>
+                <a href="/transparencia.php" class="text-gray-600 hover:text-red-600">Transparência</a>
+                <a href="/contato.php" class="text-gray-600 hover:text-red-600">Contato</a>
+            </nav>
+            <button class="md:hidden" id="menu-toggle" aria-label="Toggle menu">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
+            <a href="/" class="block py-2 text-red-600">Início</a>
+            <a href="/sobre.php" class="block py-2 text-gray-600">Sobre</a>
+            <a href="/noticias.php" class="block py-2 text-gray-600">Notícias</a>
+            <a href="/medicos.php" class="block py-2 text-gray-600">Médicos</a>
+            <a href="/servicos.php" class="block py-2 text-gray-600">Serviços</a>
+            <a href="/transparencia.php" class="block py-2 text-gray-600">Transparência</a>
+            <a href="/contato.php" class="block py-2 text-gray-600">Contato</a>
+        </div>
+    </header>
+
+    <section class="bg-red-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Sobre Nós</h1>
+            <div class="flex items-center text-sm">
+                <a href="index.php" class="text-red-100 hover:text-white">Início</a>
+                <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+                <span>Sobre</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="lg:w-2/3 mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center" data-aos="fade-up">Nossa História</h2>
+                <div data-aos="fade-up" class="text-gray-600 leading-relaxed space-y-4">
+                    <p>
+                        A Associação Hospital Beneficente de Maracaí foi fundada em 28 de novembro de 1977, com o
+                        objetivo de oferecer cuidados médicos à população de Maracaí, cidade localizada no interior de
+                        São Paulo. Inicialmente, a instituição surgiu para suprir a demanda local por serviços de saúde,
+                        e ao longo dos anos tem se dedicado a fornecer atendimento hospitalar, incluindo internações e
+                        cirurgias, para a comunidade.
+                    </p>
+                    <p>
+                        Em 2009, a Associação recebeu uma emenda parlamentar do deputado Ed Thomas, que destinou R$ 50
+                        mil para a aquisição de equipamentos essenciais para o hospital, como monitores multiparâmetros
+                        e aparelhos de ar-condicionado, além de recursos para melhorar o atendimento à população. A
+                        infraestrutura do hospital continuou a se expandir, e em 2011, foi inaugurado um novo Centro
+                        Cirúrgico, o <span class="font-bold">Matilde Alves da Silva</span>, que recebeu esse nome em
+                        homenagem a uma parteira que teve um papel fundamental na história da entidade. O novo centro
+                        tem capacidade para realizar até duas cirurgias simultâneas, atendendo a uma grande parte da
+                        população de Maracaí.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossa Missão, Visão e Valores</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Guiamos nosso trabalho por princípios que colocam o paciente
+                    no centro de tudo o que fazemos</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up">
+                    <div class="bg-red-100 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="target" class="text-red-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Missão</h3>
+                    <p class="text-gray-600">
+                        Promover a saúde e o bem-estar da comunidade através de atendimento médico humanizado, com
+                        excelência técnica e compromisso social.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="eye" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Visão</h3>
+                    <p class="text-gray-600">
+                        Ser reconhecido como referência em assistência hospitalar, com qualidade, inovação e
+                        sustentabilidade, até 2030.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-green-100 p-4 rounded-full inline-block mb-4">
+                        <i data-feather="award" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Valores</h3>
+                    <p class="text-gray-600">
+                        Ética, transparência, humanização, excelência técnica, responsabilidade social e compromisso com
+                        a vida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i data-feather="clock" class="mr-3 text-red-600"></i> Horários de Funcionamento
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-semibold text-lg mb-2">Pronto-Socorro</h3>
+                            <p class="text-gray-600">Atendimento 24h por dia, 7 dias por semana.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-semibold text-lg mb-2">Internação</h3>
+                            <p class="text-gray-600">Atendimento 24h por dia, 7 dias por semana.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-semibold text-lg mb-2">Exames Radiológicos</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li><strong>Segunda a Sexta:</strong> 7h às 12h e 16h às 21h</li>
+                                <li><strong>Sábado:</strong> 7h às 12h</li>
+                                <li><strong>Domingo:</strong> 7h às 11h</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i data-feather="users" class="mr-3 text-red-600"></i> Horários de Visitas
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-semibold text-lg mb-2">Horário de Visitas</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li><strong>Tarde:</strong> 14h às 15h</li>
+                                <li><strong>Noite:</strong> 19h às 20h</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-semibold text-lg mb-2">Troca de Acompanhante</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li><strong>Manhã:</strong> 07h30 às 08h30</li>
+                                <li><strong>Tarde:</strong> 13h às 14h</li>
+                                <li><strong>Noite:</strong> 19h30 às 20h30</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4" role="alert">
+                            <p class="font-bold mb-2">Orientações Gerais</p>
+                            <ul class="list-disc list-inside text-sm space-y-2">
+                                <li>Visitas suspensas para pacientes suspeitos ou confirmados com Covid-19.</li>
+                                <li>Higienizar as mãos com água e sabão antes e depois do contato com o paciente.</li>
+                                <li>Evitar contatos físicos e a circulação por áreas comuns.</li>
+                                <li>Entrada permitida apenas para pessoas sem sintomas gripais (tosse, coriza, febre).
+                                </li>
+                                <li>É obrigatório o uso de crachá de identificação.</li>
+                                <li>Permitido o revezamento de visitas, uma por vez.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">AHBM Hospital</h3>
+                     <a 
+                        href="https://www.google.com/maps?q=Av.+José+Bonifácio,+382+-+Centro,+Maracaí+-+SP,+19840-000" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="text-gray-300 hover:underline flex items-start"
+                    >
+                        <i data-feather="map-pin" class="mr-2 mt-1 h-4 w-4"></i>
+                        <span>
+                            Av. José Bonifácio, 382 - Centro<br>
+                            Maracaí - SP<br>
+                            CEP: 19840-000
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <p class="text-gray-300 mb-2">
+                        <a href="tel:+551833334444" class="flex items-center hover:underline">
+                            <i data-feather="phone" class="mr-2 h-4 w-4"></i> (18) 3333-4444
+                        </a>
+                    </p>
+                    <p class="text-gray-300 mb-2">
+                         <a href="mailto:contato@ahbmhospital.com.br" class="flex items-center hover:underline">
+                            <i data-feather="mail" class="mr-2 h-4 w-4"></i> contato@ahbmhospital.com.br
+                        </a>
+                    </p>
+                    <p class="text-gray-300 flex items-center">
+                        <i data-feather="clock" class="mr-2 h-4 w-4"></i> Emergência 24 horas
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/sobre.php" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
+                        <li><a href="/noticias.php" class="text-gray-300 hover:text-white">Notícias</a></li>
+                        <li><a href="/medicos.php" class="text-gray-300 hover:text-white">Médicos</a></li>
+                        <li><a href="/servicos.php" class="text-gray-300 hover:text-white">Serviços</a></li>
+                        <li><a href="/transparencia.php" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
+                        <li><a href="/contato.php" class="text-gray-300 hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/ahbm.maracai" target='_blank' class="text-gray-300 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="https://www.instagram.com/ahbm.maracai/" target='_blank' class="text-gray-300 hover:text-white"><i data-feather="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© <?php echo date("Y"); ?> AHBM Hospital de Maracaí. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Initialize AOS and Feather Icons
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            feather.replace();
+        });
+    </script>
+</body>
+
+</html>
