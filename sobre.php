@@ -4,30 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AHBM Hospital de Maracaí</title>
+    <title>Sobre - AHB Maracaí</title>
     <link rel="icon" type="image/x-icon" href="/public/logo.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        html, body {
+            width: 100%;
+        }
+        @media (max-width: 767px) {
+            html, body {
+                overflow-x: hidden;
+            }
+        }
+    </style>
 </head>
 
 <body class="font-sans bg-gray-50">
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <i data-feather="heart" class="text-red-600 mr-2"></i>
-                <h1 class="text-xl font-bold text-gray-800">AHB Maracaí</h1>
+                <a href="/" class="flex items-center">
+                    <i data-feather="heart" class="text-red-600 mr-2"></i>
+                    <h1 class="text-xl font-bold text-gray-800">AHB Maracaí</h1>
+                </a>
             </div>
             <nav class="hidden md:flex space-x-8">
-                <a href="/" class="text-red-600 font-medium">Início</a>
-                <a href="/sobre.php" class="text-gray-600 hover:text-red-600">Sobre</a>
-                <a href="/noticias.php" class="text-gray-600 hover:text-red-600">Notícias</a>
-                <a href="/medicos.php" class="text-gray-600 hover:text-red-600">Médicos</a>
-                <a href="/servicos.php" class="text-gray-600 hover:text-red-600">Serviços</a>
-                <a href="/transparencia.php" class="text-gray-600 hover:text-red-600">Transparência</a>
-                <a href="/contato.php" class="text-gray-600 hover:text-red-600">Contato</a>
+                <a href="/" class="text-gray-600 hover:text-red-600">Início</a>
+                <a href="/sobre" class="text-red-600 font-medium">Sobre</a>
+                <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
+                <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a>
+                <a href="/servicos" class="text-gray-600 hover:text-red-600">Serviços</a>
+                <a href="/transparencia" class="text-gray-600 hover:text-red-600">Transparência</a>
+                <a href="/contato" class="text-gray-600 hover:text-red-600">Contato</a>
             </nav>
             <button class="md:hidden" id="menu-toggle" aria-label="Toggle menu">
                 <i data-feather="menu"></i>
@@ -35,12 +47,12 @@
         </div>
         <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
             <a href="/" class="block py-2 text-red-600">Início</a>
-            <a href="/sobre.php" class="block py-2 text-gray-600">Sobre</a>
-            <a href="/noticias.php" class="block py-2 text-gray-600">Notícias</a>
-            <a href="/medicos.php" class="block py-2 text-gray-600">Médicos</a>
-            <a href="/servicos.php" class="block py-2 text-gray-600">Serviços</a>
-            <a href="/transparencia.php" class="block py-2 text-gray-600">Transparência</a>
-            <a href="/contato.php" class="block py-2 text-gray-600">Contato</a>
+            <a href="/sobre" class="block py-2 text-gray-600">Sobre</a>
+            <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
+            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a>
+            <a href="/servicos" class="block py-2 text-gray-600">Serviços</a>
+            <a href="/transparencia" class="block py-2 text-gray-600">Transparência</a>
+            <a href="/contato" class="block py-2 text-gray-600">Contato</a>
         </div>
     </header>
 
@@ -96,8 +108,7 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Missão</h3>
                     <p class="text-gray-600">
-                        Promover a saúde e o bem-estar da comunidade através de atendimento médico humanizado, com
-                        excelência técnica e compromisso social.
+                        Nossa missão é fundamentada em quatro pilares essenciais: acolher cada paciente com empatia, respeitar sua individualidade e dignidade, cuidar com excelência e dedicação, e lutar incansavelmente pela vida e pelo seu bem-estar.
                     </p>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
@@ -106,25 +117,24 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Visão</h3>
                     <p class="text-gray-600">
-                        Ser reconhecido como referência em assistência hospitalar, com qualidade, inovação e
-                        sustentabilidade, até 2030.
+                        Almejamos ser a principal referência em saúde na região, reconhecidos pela excelência de nosso corpo clínico, pela inovação constante em nossos processos e por um crescimento sustentável que nos permita cuidar de cada vez mais vidas.
                     </p>
                 </div>
+
                 <div class="bg-white p-8 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="bg-green-100 p-4 rounded-full inline-block mb-4">
                         <i data-feather="award" class="text-green-600 w-8 h-8"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Valores</h3>
                     <p class="text-gray-600">
-                        Ética, transparência, humanização, excelência técnica, responsabilidade social e compromisso com
-                        a vida.
+                        Nossas ações são guiadas pela ética e transparência inegociáveis. Praticamos a humanização em cada contato, buscamos a excelência técnica em cada procedimento e honramos nossa responsabilidade social, reafirmando diariamente nosso compromisso com a vida.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16">
+    <section id="horarios" class="py-16">
         <div class="container mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12">
                 <div data-aos="fade-right">
@@ -211,13 +221,13 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contato</h3>
                     <p class="text-gray-300 mb-2">
-                        <a href="tel:+551833334444" class="flex items-center hover:underline">
-                            <i data-feather="phone" class="mr-2 h-4 w-4"></i> (18) 3333-4444
+                        <a href="tel:+551833712797" class="flex items-center hover:underline">
+                            <i data-feather="phone" class="mr-2 h-4 w-4"></i> (18) 3371-2797
                         </a>
                     </p>
                     <p class="text-gray-300 mb-2">
-                         <a href="mailto:contato@ahbmhospital.com.br" class="flex items-center hover:underline">
-                            <i data-feather="mail" class="mr-2 h-4 w-4"></i> contato@ahbmhospital.com.br
+                         <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
+                            <i data-feather="mail" class="mr-2 h-4 w-4"></i> provedoria@ahbm.com.br
                         </a>
                     </p>
                     <p class="text-gray-300 flex items-center">
@@ -227,12 +237,12 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="/sobre.php" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
-                        <li><a href="/noticias.php" class="text-gray-300 hover:text-white">Notícias</a></li>
-                        <li><a href="/medicos.php" class="text-gray-300 hover:text-white">Médicos</a></li>
-                        <li><a href="/servicos.php" class="text-gray-300 hover:text-white">Serviços</a></li>
-                        <li><a href="/transparencia.php" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
-                        <li><a href="/contato.php" class="text-gray-300 hover:text-white">Contato</a></li>
+                        <li><a href="/sobre" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
+                        <li><a href="/noticias" class="text-gray-300 hover:text-white">Notícias</a></li>
+                        <li><a href="/medicos" class="text-gray-300 hover:text-white">Médicos</a></li>
+                        <li><a href="/servicos" class="text-gray-300 hover:text-white">Serviços</a></li>
+                        <li><a href="/transparencia" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
+                        <li><a href="/contato" class="text-gray-300 hover:text-white">Contato</a></li>
                     </ul>
                 </div>
                 <div>

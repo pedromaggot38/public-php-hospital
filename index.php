@@ -42,12 +42,12 @@
             </div>
             <nav class="hidden md:flex space-x-8">
                 <a href="/" class="text-red-600 font-medium">Início</a>
-                <a href="/sobre.php" class="text-gray-600 hover:text-red-600">Sobre</a>
-                <a href="/noticias.php" class="text-gray-600 hover:text-red-600">Notícias</a>
-                <a href="/medicos.php" class="text-gray-600 hover:text-red-600">Médicos</a>
-                <a href="/servicos.php" class="text-gray-600 hover:text-red-600">Serviços</a>
-                <a href="/transparencia.php" class="text-gray-600 hover:text-red-600">Transparência</a>
-                <a href="/contato.php" class="text-gray-600 hover:text-red-600">Contato</a>
+                <a href="/sobre" class="text-gray-600 hover:text-red-600">Sobre</a>
+                <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
+                <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a>
+                <a href="/servicos" class="text-gray-600 hover:text-red-600">Serviços</a>
+                <a href="/transparencia" class="text-gray-600 hover:text-red-600">Transparência</a>
+                <a href="/contato" class="text-gray-600 hover:text-red-600">Contato</a>
             </nav>
             <button class="md:hidden" id="menu-toggle" aria-label="Toggle menu">
                 <i data-feather="menu"></i>
@@ -55,12 +55,12 @@
         </div>
         <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
             <a href="/" class="block py-2 text-red-600">Início</a>
-            <a href="/sobre.php" class="block py-2 text-gray-600">Sobre</a>
-            <a href="/noticias.php" class="block py-2 text-gray-600">Notícias</a>
-            <a href="/medicos.php" class="block py-2 text-gray-600">Médicos</a>
-            <a href="/servicos.php" class="block py-2 text-gray-600">Serviços</a>
-            <a href="/transparencia.php" class="block py-2 text-gray-600">Transparência</a>
-            <a href="/contato.php" class="block py-2 text-gray-600">Contato</a>
+            <a href="/sobre" class="block py-2 text-gray-600">Sobre</a>
+            <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
+            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a>
+            <a href="/servicos" class="block py-2 text-gray-600">Serviços</a>
+            <a href="/transparencia" class="block py-2 text-gray-600">Transparência</a>
+            <a href="/contato" class="block py-2 text-gray-600">Contato</a>
         </div>
     </header>
 
@@ -69,7 +69,7 @@
             <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">Cuidando da saúde de Maracaí e região desde 1977</h1>
             <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Oferecemos atendimento humanizado e tecnologia de ponta para toda a comunidade.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="/servicos.php" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition">Nossos Serviços</a>
+                <a href="/servicos" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition">Nossos Serviços</a>
             </div>
         </div>
     </section>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 
-                <a href="/sobre.php" class="inline-flex items-center text-red-600 font-medium">
+                <a href="/sobre" class="inline-flex items-center text-red-600 font-medium">
                     Saiba mais sobre nós <i data-feather="arrow-right" class="ml-2"></i>
                 </a>
             </div>
@@ -149,6 +149,10 @@
                             <p class="text-sm text-gray-700">Em caso de emergência, dirija-se imediatamente ao nosso pronto-socorro ou ligue para <strong class="text-red-600"><a href="tel:+551833712797">(18) 3371-2797</a></strong></p>
                         </div>
                     </div>
+                    <a href="/sobre#horarios" class="mt-6 inline-flex items-center text-red-600 font-medium">
+                        Ver todos os horários de funcionamento <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                    <a ></a>
                 </div>
             </div>
         </div>
@@ -235,12 +239,12 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="/sobre.php" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
-                        <li><a href="/noticias.php" class="text-gray-300 hover:text-white">Notícias</a></li>
-                        <li><a href="/medicos.php" class="text-gray-300 hover:text-white">Médicos</a></li>
-                        <li><a href="/servicos.php" class="text-gray-300 hover:text-white">Serviços</a></li>
-                        <li><a href="/transparencia.php" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
-                        <li><a href="/contato.php" class="text-gray-300 hover:text-white">Contato</a></li>
+                        <li><a href="/sobre" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
+                        <li><a href="/noticias" class="text-gray-300 hover:text-white">Notícias</a></li>
+                        <li><a href="/medicos" class="text-gray-300 hover:text-white">Médicos</a></li>
+                        <li><a href="/servicos" class="text-gray-300 hover:text-white">Serviços</a></li>
+                        <li><a href="/transparencia" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
+                        <li><a href="/contato" class="text-gray-300 hover:text-white">Contato</a></li>
                     </ul>
                 </div>
                 <div>
@@ -294,7 +298,6 @@
             if (item.imageUrl) {
                 imageElement = `<img src="${item.imageUrl}" alt="${item.imageDescription || 'Imagem da notícia'}" class="w-full h-32 object-cover">`;
             } else {
-                // VOLTANDO A USAR O SVG COMPLETO - ESTA É A FORMA MAIS SEGURA
                 imageElement = `
                     <div class="w-full h-32 bg-gray-200 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image text-gray-400">

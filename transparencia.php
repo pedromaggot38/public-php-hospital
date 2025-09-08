@@ -10,6 +10,14 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <style>
+        html, body {
+            width: 100%;
+        }
+        @media (max-width: 767px) {
+            html, body {
+                overflow-x: hidden;
+            }
+        }
         .transparency-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://static.photos/finance/1200x630/1');
             background-size: cover;
@@ -24,17 +32,19 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <i data-feather="heart" class="text-red-600 mr-2"></i>
-                <h1 class="text-xl font-bold text-gray-800">AHB Maracaí</h1>
+                <a href="/" class="flex items-center">
+                    <i data-feather="heart" class="text-red-600 mr-2"></i>
+                    <h1 class="text-xl font-bold text-gray-800">AHB Maracaí</h1>
+                </a>
             </div>
             <nav class="hidden md:flex space-x-8">
-                <a href="/" class="text-red-600 font-medium">Início</a>
-                <a href="/sobre.php" class="text-gray-600 hover:text-red-600">Sobre</a>
-                <a href="/noticias.php" class="text-gray-600 hover:text-red-600">Notícias</a>
-                <a href="/medicos.php" class="text-gray-600 hover:text-red-600">Médicos</a>
-                <a href="/servicos.php" class="text-gray-600 hover:text-red-600">Serviços</a>
-                <a href="/transparencia.php" class="text-gray-600 hover:text-red-600">Transparência</a>
-                <a href="/contato.php" class="text-gray-600 hover:text-red-600">Contato</a>
+                <a href="/" class="text-gray-600 hover:text-red-600">Início</a>
+                <a href="/sobre" class="text-gray-600 hover:text-red-600">Sobre</a>
+                <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
+                <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a>
+                <a href="/servicos" class="text-gray-600 hover:text-red-600">Serviços</a>
+                <a href="/transparencia" class="text-red-600 font-medium">Transparência</a>
+                <a href="/contato" class="text-gray-600 hover:text-red-600">Contato</a>
             </nav>
             <button class="md:hidden" id="menu-toggle" aria-label="Toggle menu">
                 <i data-feather="menu"></i>
@@ -42,16 +52,15 @@
         </div>
         <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
             <a href="/" class="block py-2 text-red-600">Início</a>
-            <a href="/sobre.php" class="block py-2 text-gray-600">Sobre</a>
-            <a href="/noticias.php" class="block py-2 text-gray-600">Notícias</a>
-            <a href="/medicos.php" class="block py-2 text-gray-600">Médicos</a>
-            <a href="/servicos.php" class="block py-2 text-gray-600">Serviços</a>
-            <a href="/transparencia.php" class="block py-2 text-gray-600">Transparência</a>
-            <a href="/contato.php" class="block py-2 text-gray-600">Contato</a>
+            <a href="/sobre" class="block py-2 text-gray-600">Sobre</a>
+            <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
+            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a>
+            <a href="/servicos" class="block py-2 text-gray-600">Serviços</a>
+            <a href="/transparencia" class="block py-2 text-gray-600">Transparência</a>
+            <a href="/contato" class="block py-2 text-gray-600">Contato</a>
         </div>
     </header>
 
-    <!-- Page Header -->
     <section class="transparency-bg text-white py-20">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-3xl md:text-4xl font-bold mb-4">Portal da Transparência</h1>
@@ -59,7 +68,6 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <div class="container mx-auto px-4 py-12">
         <div class="mb-12 text-center">
             <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Dados</h2>
@@ -68,7 +76,6 @@
             </p>
         </div>
 
-        <!-- Documents Section -->
         <section class="mb-16">
             <h3 class="text-2xl font-bold text-gray-800 mb-6">Documentos Institucionais</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -120,7 +127,6 @@
             </div>
         </section>
 
-        <!-- Financial Section -->
         <section class="mb-16">
             <h3 class="text-2xl font-bold text-gray-800 mb-6">Dados Financeiros</h3>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -141,7 +147,6 @@
             </div>
         </section>
 
-        <!-- Reports Section -->
         <section>
             <h3 class="text-2xl font-bold text-gray-800 mb-6">Relatórios e Prestações de Contas</h3>
             <div class="overflow-x-auto">
@@ -210,7 +215,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section class="mt-16 bg-gray-100 rounded-lg p-8">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">Acesso à Informação</h3>
             <p class="text-gray-600 mb-6">
@@ -242,13 +246,13 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contato</h3>
                     <p class="text-gray-300 mb-2">
-                        <a href="tel:+551833334444" class="flex items-center hover:underline">
-                            <i data-feather="phone" class="mr-2 h-4 w-4"></i> (18) 3333-4444
+                        <a href="tel:+551833712797" class="flex items-center hover:underline">
+                            <i data-feather="phone" class="mr-2 h-4 w-4"></i> (18) 3371-2797
                         </a>
                     </p>
                     <p class="text-gray-300 mb-2">
-                         <a href="mailto:contato@ahbmhospital.com.br" class="flex items-center hover:underline">
-                            <i data-feather="mail" class="mr-2 h-4 w-4"></i> contato@ahbmhospital.com.br
+                         <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
+                            <i data-feather="mail" class="mr-2 h-4 w-4"></i> provedoria@ahbm.com.br
                         </a>
                     </p>
                     <p class="text-gray-300 flex items-center">
@@ -258,12 +262,12 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="/sobre.php" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
-                        <li><a href="/noticias.php" class="text-gray-300 hover:text-white">Notícias</a></li>
-                        <li><a href="/medicos.php" class="text-gray-300 hover:text-white">Médicos</a></li>
-                        <li><a href="/servicos.php" class="text-gray-300 hover:text-white">Serviços</a></li>
-                        <li><a href="/transparencia.php" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
-                        <li><a href="/contato.php" class="text-gray-300 hover:text-white">Contato</a></li>
+                        <li><a href="/sobre" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
+                        <li><a href="/noticias" class="text-gray-300 hover:text-white">Notícias</a></li>
+                        <li><a href="/medicos" class="text-gray-300 hover:text-white">Médicos</a></li>
+                        <li><a href="/servicos" class="text-gray-300 hover:text-white">Serviços</a></li>
+                        <li><a href="/transparencia" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
+                        <li><a href="/contato" class="text-gray-300 hover:text-white">Contato</a></li>
                     </ul>
                 </div>
                 <div>
