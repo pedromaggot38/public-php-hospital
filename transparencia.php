@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal da Transparência - AHB Maracaí</title>
+    <link rel="icon" type="image/x-icon" href="/public/logo.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <style>
         html, body {
             width: 100%;
@@ -130,7 +131,7 @@
         <section class="mt-16">
             <?php
             // Define o diretório base para as prestações de contas
-            $diretorio = 'transparencia/'; 
+            $diretorio = 'dados-transparencia/'; 
 
             // Lê os anos disponíveis
             $anos = scandir($diretorio);
