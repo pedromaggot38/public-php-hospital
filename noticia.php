@@ -290,7 +290,7 @@ if ($artigo) {
 
                 news.forEach(item => {
                     const newsCard = document.createElement('a'); 
-                    newsCard.href = `noticia.php?slug=${item.slug}`;
+                    newsCard.href = `/noticias/${item.slug}`;
                     newsCard.className = 'news-card flex items-center gap-4 p-2 rounded-lg transition hover:bg-gray-100';
 
                     let imageElement;

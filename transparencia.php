@@ -28,7 +28,7 @@
         }
     </style>
 </head>
-<body class="font-sans bg-gray-50">
+<body>
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
@@ -127,100 +127,90 @@
             </div>
         </section>
 
-        <section class="mb-16">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">Dados Financeiros</h3>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
-                    <div class="p-6 text-center">
-                        <div class="text-3xl font-bold text-red-600 mb-2">R$ 12.5M</div>
-                        <p class="text-gray-600">Orçamento Anual (2023)</p>
-                    </div>
-                    <div class="p-6 text-center">
-                        <div class="text-3xl font-bold text-red-600 mb-2">87%</div>
-                        <p class="text-gray-600">Recursos Aplicados Diretamente em Atendimento</p>
-                    </div>
-                    <div class="p-6 text-center">
-                        <div class="text-3xl font-bold text-red-600 mb-2">R$ 3.2M</div>
-                        <p class="text-gray-600">Investimentos em 2023</p>
-                    </div>
+        <section class="mt-16">
+            <?php
+            // Define o diretório base para as prestações de contas
+            $diretorio = 'transparencia/'; 
+
+            // Lê os anos disponíveis
+            $anos = scandir($diretorio);
+            $anos = array_filter($anos, function($item) use ($diretorio) {
+                return is_dir($diretorio . $item) && !in_array($item, ['.', '..']);
+            });
+            rsort($anos); // Ordena os anos do mais recente para o mais antigo
+
+            // Define o ano selecionado (o mais recente por padrão, ou o da URL)
+            // Lógica ajustada para ser compatível com PHP 5.x e 7.x
+            $anoSelecionado = isset($_GET['ano']) && in_array($_GET['ano'], $anos) ? $_GET['ano'] : (isset($anos[0]) ? $anos[0] : null);
+
+            $meses_nomes = [
+                '01' => 'Janeiro', '02' => 'Fevereiro', '03' => 'Março', '04' => 'Abril',
+                '05' => 'Maio', '06' => 'Junho', '07' => 'Julho', '08' => 'Agosto',
+                '09' => 'Setembro', '10' => 'Outubro', '11' => 'Novembro', '12' => 'Dezembro'
+            ];
+            ?>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Prestações de Contas</h3>
+            
+            <div class="flex flex-col md:flex-row items-center gap-4 mb-8">
+                <label for="ano-select" class="text-lg font-medium text-gray-700">Escolha o Ano:</label>
+                <form id="form-ano" action="transparencia.php" method="GET" class="w-full md:w-auto">
+                    <select id="ano-select" name="ano" onchange="this.form.submit()" class="block w-full md:w-auto py-2 px-4 rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 text-base">
+                        <?php if (!empty($anos)): ?>
+                            <?php foreach ($anos as $ano): ?>
+                                <option value="<?php echo $ano; ?>" <?php echo $ano == $anoSelecionado ? 'selected' : ''; ?>>
+                                    <?php echo $ano; ?>
+                                </option>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <option value="">Nenhum ano encontrado</option>
+                        <?php endif; ?>
+                    </select>
+                </form>
+            </div>
+
+            <?php if ($anoSelecionado): ?>
+                <?php
+                $caminhoAno = $diretorio . $anoSelecionado;
+                $arquivos = scandir($caminhoAno);
+                $arquivos = array_filter($arquivos, function($item) {
+                    return pathinfo($item, PATHINFO_EXTENSION) === 'pdf';
+                });
+                sort($arquivos); // Ordena os arquivos em ordem crescente
+                ?>
+
+                <div class="bg-white shadow rounded-lg p-6">
+                    <?php if (empty($arquivos)): ?>
+                        <p class="text-gray-600 text-center">Nenhum arquivo encontrado para este ano.</p>
+                    <?php else: ?>
+                        <ul class="space-y-4">
+                            <?php foreach ($arquivos as $arquivo): ?>
+                                <?php
+                                $nome_base = str_replace('.pdf', '', $arquivo);
+                                $partes = explode('-', $nome_base);
+                                $mes = count($partes) > 0 ? $partes[0] : '';
+                                $nome_exibicao = isset($meses_nomes[$mes]) ? $meses_nomes[$mes] : str_replace(['-', '.pdf'], [' ', ''], $arquivo);
+                                ?>
+                                <li class="border-b pb-4 last:border-b-0">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center">
+                                            <i data-feather="file-text" class="text-gray-500 mr-3 w-5 h-5"></i>
+                                            <span class="text-lg font-medium text-gray-800"><?php echo $nome_exibicao; ?></span>
+                                        </div>
+                                        <a href="<?php echo $caminhoAno . '/' . $arquivo; ?>" target="_blank" class="bg-red-600 text-white px-4 py-2 rounded-md font-medium hover:bg-red-700 transition-colors duration-200 flex items-center">
+                                            <i data-feather="download" class="w-4 h-4 mr-2"></i> Baixar PDF
+                                        </a>
+                                    </div>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">Relatórios e Prestações de Contas</h3>
-            <div class="overflow-x-auto">
-                <table class="min-w-full bg-white rounded-lg overflow-hidden">
-                    <thead class="bg-gray-100">
-                        <tr>
-                            <th class="py-3 px-4 text-left text-gray-700">Documento</th>
-                            <th class="py-3 px-4 text-left text-gray-700">Período</th>
-                            <th class="py-3 px-4 text-left text-gray-700">Data de Publicação</th>
-                            <th class="py-3 px-4"></th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        <tr>
-                            <td class="py-4 px-4">Relatório Anual de Gestão</td>
-                            <td class="py-4 px-4">2022</td>
-                            <td class="py-4 px-4">30/04/2023</td>
-                            <td class="py-4 px-4 text-right">
-                                <a href="#" class="text-red-600 hover:underline flex items-center justify-end">
-                                    <i data-feather="download" class="mr-2 w-4 h-4"></i> Baixar
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 px-4">Demonstrações Financeiras</td>
-                            <td class="py-4 px-4">1º Trimestre 2023</td>
-                            <td class="py-4 px-4">15/04/2023</td>
-                            <td class="py-4 px-4 text-right">
-                                <a href="#" class="text-red-600 hover:underline flex items-center justify-end">
-                                    <i data-feather="download" class="mr-2 w-4 h-4"></i> Baixar
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 px-4">Prestação de Contas</td>
-                            <td class="py-4 px-4">2022</td>
-                            <td class="py-4 px-4">28/03/2023</td>
-                            <td class="py-4 px-4 text-right">
-                                <a href="#" class="text-red-600 hover:underline flex items-center justify-end">
-                                    <i data-feather="download" class="mr-2 w-4 h-4"></i> Baixar
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 px-4">Relatório de Auditoria</td>
-                            <td class="py-4 px-4">2022</td>
-                            <td class="py-4 px-4">10/03/2023</td>
-                            <td class="py-4 px-4 text-right">
-                                <a href="#" class="text-red-600 hover:underline flex items-center justify-end">
-                                    <i data-feather="download" class="mr-2 w-4 h-4"></i> Baixar
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-4 px-4">Demonstrações Financeiras</td>
-                            <td class="py-4 px-4">2022</td>
-                            <td class="py-4 px-4">28/02/2023</td>
-                            <td class="py-4 px-4 text-right">
-                                <a href="#" class="text-red-600 hover:underline flex items-center justify-end">
-                                    <i data-feather="download" class="mr-2 w-4 h-4"></i> Baixar
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="mt-16 bg-gray-100 rounded-lg p-8">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Acesso à Informação</h3>
-            <p class="text-gray-600 mb-6">
-                Caso não encontre a informação que procura, você pode solicitar diretamente através da Lei de Acesso à Informação (LAI).
-            </p>
-            <a href="#" class="inline-block bg-red-600 text-white px-6 py-3 rounded-md font-medium hover:bg-red-700">Solicitar Informação</a>
+            <?php else: ?>
+                <div class="bg-white shadow rounded-lg p-6 text-center text-gray-600">
+                    <p>Nenhum ano de prestação de contas encontrado.</p>
+                </div>
+            <?php endif; ?>
         </section>
     </div>
 
@@ -230,18 +220,18 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">AHBM Hospital</h3>
                      <a 
-                        href="https://www.google.com/maps?q=Av.+José+Bonifácio,+382+-+Centro,+Maracaí+-+SP,+19840-000" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        class="text-gray-300 hover:underline flex items-start"
-                    >
-                        <i data-feather="map-pin" class="mr-2 mt-1 h-4 w-4"></i>
-                        <span>
-                            Av. José Bonifácio, 382 - Centro<br>
-                            Maracaí - SP<br>
-                            CEP: 19840-000
-                        </span>
-                    </a>
+                         href="https://www.google.com/maps?q=Av.+José+Bonifácio,+382+-+Centro,+Maracaí+-+SP,+19840-000" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         class="text-gray-300 hover:underline flex items-start"
+                     >
+                         <i data-feather="map-pin" class="mr-2 mt-1 h-4 w-4"></i>
+                         <span>
+                             Av. José Bonifácio, 382 - Centro<br>
+                             Maracaí - SP<br>
+                             CEP: 19840-000
+                         </span>
+                     </a>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contato</h3>

@@ -1,18 +1,26 @@
-# Ativa o motor de reescrita de URL do Apache
-RewriteEngine On
-
-# Impede que os usuários possam listar o conteúdo das pastas
+# --- opções ---
 Options -Indexes
+Options -MultiViews
+
+RewriteEngine On
+RewriteBase /
 
 ErrorDocument 404 /404.php
 
-# ----------------------------------------------------
-# SEÇÃO 1: REGRAS ESPECÍFICAS PARA NOTÍCIAS
-# ----------------------------------------------------
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^noticias/?$ noticias.php [L]
+# --- regras personalizadas primeiro ---
+# detalhe da notícia (slug)
+RewriteRule ^noticias/([^/]+)/?$ noticia.php?slug=$1 [L,QSA,NC]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^noticias/([a-zA-Z0-9-]+)/?$ noticia.php?slug=$1 [L,QSA]
+# lista de notícias
+RewriteRule ^noticias/?$ noticias.php [L,NC]
+
+# outras páginas
+RewriteRule ^sobre/?$ sobre.php [L]
+RewriteRule ^medicos/?$ medicos.php [L]
+RewriteRule ^servicos/?$ servicos.php [L]
+RewriteRule ^transparencia/?$ transparencia.php [L]
+
+# --- só no final: se for arquivo/pasta real, não reescreve ---
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]

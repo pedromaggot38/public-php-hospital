@@ -279,7 +279,7 @@
             async function fetchNews() {
     const newsContainer = document.getElementById('news-container');
     try {
-        const response = await fetch('https://tcc-v2-peach.vercel.app/api/v1/public/articles?limit=5');
+        const response = await fetch('https://tcc-v2-seven.vercel.app/api/v1/public/articles?limit=5');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -321,7 +321,9 @@
             `;
             
             newsCard.addEventListener('click', () => {
-                window.location.href = `noticias/${item.slug}`;
+                if (item.slug) {
+                    window.location.href = `/noticias/${item.slug}`;
+                }
             });
             newsContainer.appendChild(newsCard);
         });
