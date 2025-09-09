@@ -128,7 +128,7 @@
             </div>
         </section>
 
-        <section class="mt-16">
+        <section id="prestacoes-de-contas" class="mt-16">
             <?php
             // Define o diretório base para as prestações de contas
             $diretorio = 'dados-transparencia/'; 
@@ -141,7 +141,6 @@
             rsort($anos); // Ordena os anos do mais recente para o mais antigo
 
             // Define o ano selecionado (o mais recente por padrão, ou o da URL)
-            // Lógica ajustada para ser compatível com PHP 5.x e 7.x
             $anoSelecionado = isset($_GET['ano']) && in_array($_GET['ano'], $anos) ? $_GET['ano'] : (isset($anos[0]) ? $anos[0] : null);
 
             $meses_nomes = [
@@ -155,7 +154,7 @@
             
             <div class="flex flex-col md:flex-row items-center gap-4 mb-8">
                 <label for="ano-select" class="text-lg font-medium text-gray-700">Escolha o Ano:</label>
-                <form id="form-ano" action="transparencia.php" method="GET" class="w-full md:w-auto">
+                <form id="form-ano" action="transparencia.php#prestacoes-de-contas" method="GET" class="w-full md:w-auto">
                     <select id="ano-select" name="ano" onchange="this.form.submit()" class="block w-full md:w-auto py-2 px-4 rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 text-base">
                         <?php if (!empty($anos)): ?>
                             <?php foreach ($anos as $ano): ?>

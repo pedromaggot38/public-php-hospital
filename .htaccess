@@ -19,6 +19,7 @@ RewriteRule ^sobre/?$ sobre.php [L]
 RewriteRule ^medicos/?$ medicos.php [L]
 RewriteRule ^servicos/?$ servicos.php [L]
 RewriteRule ^transparencia/?$ transparencia.php [L]
+RewriteRule ^contato/?$ contato.php [L]
 
 # --- só no final: se for arquivo/pasta real, não reescreve ---
 RewriteCond %{REQUEST_FILENAME} -f [OR]

@@ -130,16 +130,13 @@
                 <div class="bg-white p-6 rounded-lg shadow-md mt-8" data-aos="fade-left" data-aos-delay="100">
                     <h3 class="text-xl font-bold text-gray-800 mb-4">Horário de Funcionamento</h3>
                     <ul class="space-y-2">
+                        
                         <li class="flex justify-between border-b pb-2">
-                            <span class="text-gray-600">Segunda a Sexta</span>
-                            <span class="font-medium">7h às 19h</span>
-                        </li>
-                        <li class="flex justify-between border-b pb-2">
-                            <span class="text-gray-600">Sábado</span>
-                            <span class="font-medium">8h às 12h</span>
+                            <span class="text-gray-600">Pronto-Socorro</span>
+                            <span class="font-medium">24 horas</span>
                         </li>
                         <li class="flex justify-between">
-                            <span class="text-gray-600">Emergência</span>
+                            <span class="text-gray-600">Internação</span>
                             <span class="font-medium">24 horas</span>
                         </li>
                     </ul>

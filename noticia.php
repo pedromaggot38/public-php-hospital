@@ -7,7 +7,7 @@ if (isset($_GET['slug']) && !empty($_GET['slug'])) {
     $slug = $_GET['slug'];
 
     // 2. Monta a URL da API
-    $apiUrl = "https://tcc-v2-peach.vercel.app/api/v1/public/articles/" . urlencode($slug);
+    $apiUrl = "https://tcc-v2-seven.vercel.app/api/v1/public/articles/" . urlencode($slug);
 
     // 3. Faz a requisição para a API usando cURL (mais robusto)
     $ch = curl_init(); 
@@ -40,7 +40,8 @@ if (isset($_GET['slug']) && !empty($_GET['slug'])) {
 }
 
 if ($artigo) {
-    $tagsPermitidas = '<p><h1><h2><h3><h4><h5><h6><strong><b><i><em><u><ul><ol><li><blockquote><span><br><a>';
+    // Adicionando a tag <img> para permitir imagens no conteúdo do artigo
+    $tagsPermitidas = '<p><h1><h2><h3><h4><h5><h6><strong><b><i><em><u><ul><ol><li><a><blockquote><span><br><img>';
     $conteudoSeguro = strip_tags($artigo->content, $tagsPermitidas);
 }
 ?>
@@ -53,7 +54,7 @@ if ($artigo) {
     <title><?php echo $artigo ? htmlspecialchars($artigo->title) : 'Notícia'; ?> - AHBM Hospital de Maracaí</title>
     
     <link rel="icon" type="image/x-icon" href="/public/logo.svg">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script> 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -71,51 +72,29 @@ if ($artigo) {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        .article-content {
-            line-height: 1.75;
-            color: #374151;
-        }
-        .article-content h1, 
-        .article-content h2, 
-        .article-content h3 {
-            font-weight: bold;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1f2937;
-        }
-        .article-content h1 { font-size: 1.875rem; }
-        .article-content h2 { font-size: 1.5rem; }
-        .article-content h3 { font-size: 1.25rem; }
-        .article-content p { 
-            margin-bottom: 1rem; 
-        }
-        .article-content ul, .article-content ol { 
-            margin-left: 1.5rem; 
-            margin-bottom: 1rem; 
-        }
-        .article-content ul { list-style-type: disc; }
-        .article-content ol { list-style-type: decimal; }
-        .article-content a {
-            color: #DC2626; /* red-600 */
-            text-decoration: underline;
-        }
-        .article-content a:hover {
-            color: #B91C1C;
-        }
-        .article-content strong {
-            color: #1f2937;
-        }
-        .article-content blockquote {
-            border-left: 4px solid #FCA5A5;
-            background-color: #FEF2F2;
-            padding: 1rem;
+        
+        /* Estilos para as imagens dentro do conteúdo do artigo */
+        .article-content img {
+            max-width: 100%;
+            width: auto; /* Permite que a largura se ajuste à altura máxima */
+            height: auto; 
+            max-height: 24rem; /* Define a altura máxima para 96 (equivalente a 24rem) */
+            object-fit: contain; /* Ajusta a imagem sem cortá-la */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
-            font-style: italic;
-            color: #4B5563;
+            display: block; /* Garante que ela se comporte como um bloco para margin auto funcionar */
+            margin-left: auto;
+            margin-right: auto;
         }
-        .article-content blockquote p {
-            margin-bottom: 0;
+
+        /* Ajustes adicionais para o plugin prose, se necessário */
+        .prose img {
+            /* O plugin prose já adiciona alguns estilos, mas podemos sobrescrever */
+            max-height: 24rem; /* Sobrescreve para garantir */
+            object-fit: contain;
+            width: auto; /* Garante que a largura se ajuste */
         }
     </style>
 </head>
@@ -170,10 +149,10 @@ if ($artigo) {
                         <?php if (!empty($artigo->imageUrl)): ?>
                             <img src="<?php echo htmlspecialchars($artigo->imageUrl); ?>" 
                                  alt="<?php echo htmlspecialchars($artigo->imageDescription); ?>" 
-                                 class="w-full h-auto rounded-lg shadow-lg mb-8">
+                                 class="w-full h-auto max-h-[30rem] object-contain block mx-auto rounded-lg shadow-lg mb-8">
                         <?php endif; ?>
 
-                        <div class="article-content">
+                        <div class="article-content prose max-w-none">
                             <?php echo $conteudoSeguro; ?>
                         </div>
                     </article>
@@ -207,7 +186,7 @@ if ($artigo) {
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">AHBM Hospital</h3>
-                     <a 
+                    <a 
                         href="https://www.google.com/maps?q=Av.+José+Bonifácio,+382+-+Centro,+Maracaí+-+SP,+19840-000" 
                         target="_blank" 
                         rel="noopener noreferrer" 
@@ -229,9 +208,9 @@ if ($artigo) {
                         </a>
                     </p>
                     <p class="text-gray-300 mb-2">
-                         <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
-                            <i data-feather="mail" class="mr-2 h-4 w-4"></i> provedoria@ahbm.com.br
-                        </a>
+                            <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
+                                <i data-feather="mail" class="mr-2 h-4 w-4"></i> provedoria@ahbm.com.br
+                            </a>
                     </p>
                     <p class="text-gray-300 flex items-center">
                         <i data-feather="clock" class="mr-2 h-4 w-4"></i> Emergência 24 horas
@@ -272,7 +251,7 @@ if ($artigo) {
         // Função para buscar notícias recentes (para a barra lateral)
         async function fetchRecentNews() {
             const newsContainer = document.getElementById('news-container');
-            const apiUrl = 'https://tcc-v2-peach.vercel.app/api/v1/public/articles?limit=5';
+            const apiUrl = 'https://tcc-v2-seven.vercel.app/api/v1/public/articles?limit=5';
             
             try {
                 const response = await fetch(apiUrl);
@@ -322,7 +301,6 @@ if ($artigo) {
             }
         }
         
-        // Inicialização
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
             feather.replace();

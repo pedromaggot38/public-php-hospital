@@ -59,11 +59,6 @@
     <section class="bg-red-600 text-white py-12">
         <div class="container mx-auto px-4">
             <h1 class="text-3xl md:text-4xl font-bold mb-2">Sobre Nós</h1>
-            <div class="flex items-center text-sm">
-                <a href="index.php" class="text-red-100 hover:text-white">Início</a>
-                <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
-                <span>Sobre</span>
-            </div>
         </div>
     </section>
 
@@ -181,17 +176,35 @@
                                 <li><strong>Noite:</strong> 19h30 às 20h30</li>
                             </ul>
                         </div>
-                        <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4" role="alert">
-                            <p class="font-bold mb-2">Orientações Gerais</p>
-                            <ul class="list-disc list-inside text-sm space-y-2">
-                                <li>Visitas suspensas para pacientes suspeitos ou confirmados com Covid-19.</li>
-                                <li>Higienizar as mãos com água e sabão antes e depois do contato com o paciente.</li>
-                                <li>Evitar contatos físicos e a circulação por áreas comuns.</li>
-                                <li>Entrada permitida apenas para pessoas sem sintomas gripais (tosse, coriza, febre).
-                                </li>
-                                <li>É obrigatório o uso de crachá de identificação.</li>
-                                <li>Permitido o revezamento de visitas, uma por vez.</li>
-                            </ul>
+                        <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 mb-6" role="alert">
+                            <p class="font-bold text-xl mb-3">Orientações de Visitação</p>
+                            
+                            <div class="mb-5">
+                                <h3 class="font-bold text-lg text-red-800 mb-2">1. Saúde e Segurança</h3>
+                                <ul class="list-disc list-inside text-sm space-y-2">
+                                    <li>Visitas suspensas para pacientes suspeitos ou confirmados com Covid-19.</li>
+                                    <li>Entrada permitida apenas para pessoas sem sintomas gripais (tosse, coriza, febre).</li>
+                                    <li>Higienizar as mãos com água e sabão antes e depois do contato com o paciente.</li>
+                                    <li>Evitar contatos físicos e a circulação por áreas comuns.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="font-bold text-lg text-red-800 mb-2">2. Acesso e Conduta</h3>
+                                <ul class="list-disc list-inside text-sm space-y-2">
+                                    <li>É obrigatório o uso de crachá de identificação visível, que será entregue pelo vigia na recepção e deve ser devolvido após a visita.</li>
+                                    <li>É permitido o revezamento de visitas, com a entrada de uma pessoa por vez.</li>
+                                    <li>Não é permitido o ingresso de visitantes ou acompanhantes com trajes inadequados.</li>
+                                    <li>Não é permitido trazer alimentos e bebidas sem autorização prévia da nutricionista.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="font-bold text-lg text-red-800 mb-2">3. Casos Específicos</h3>
+                                <ul class="list-disc list-inside text-sm space-y-2">
+                                    <li>A equipe de enfermagem e o serviço social avaliarão a necessidade de acompanhamento nos demais casos.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
