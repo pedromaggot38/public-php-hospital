@@ -29,7 +29,7 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 font-sans">
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
@@ -78,60 +78,60 @@
         </div>
 
         <section class="mb-16">
+            <?php
+            $diretorio_institucional = 'public/documentos-institucionais/';
+            $arquivos_institucionais = glob($diretorio_institucional . '*.pdf');
+            $documentos_config = [
+                'Ata_registrada_diretoria_AHBM_2025-2029.pdf' => [
+                    'titulo' => 'Ata Registrada Diretoria',
+                    'descricao' => 'Documento oficial da ata de registro da diretoria da associação.',
+                    'icone' => 'award',
+                    'cor' => 'green'
+                ],
+                'Estatuto_atualizado_registrado.pdf' => [
+                    'titulo' => 'Estatuto Social',
+                    'descricao' => 'Documento que rege a organização e funcionamento da associação.',
+                    'icone' => 'file-text',
+                    'cor' => 'red'
+                ],
+                // Adicione outros documentos aqui se necessário, com o nome do arquivo => [configurações]
+            ];
+            ?>
             <h3 class="text-2xl font-bold text-gray-800 mb-6">Documentos Institucionais</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="document-card bg-white p-6 rounded-lg shadow-md transition-shadow duration-300" data-aos="fade-up">
-                    <div class="flex items-start mb-4">
-                        <div class="bg-red-100 p-3 rounded-full mr-4">
-                            <i data-feather="file-text" class="text-red-600"></i>
+                <?php
+                foreach ($documentos_config as $nome_arquivo => $config):
+                    $caminho_arquivo = $diretorio_institucional . $nome_arquivo;
+                    if (file_exists($caminho_arquivo)):
+                ?>
+                    <div class="document-card bg-white p-6 rounded-lg shadow-md transition-shadow duration-300" data-aos="fade-up">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-<?php echo $config['cor']; ?>-100 p-3 rounded-full mr-4">
+                                <i data-feather="<?php echo $config['icone']; ?>" class="text-<?php echo $config['cor']; ?>-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold"><?php echo $config['titulo']; ?></h4>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="text-lg font-semibold">Estatuto Social</h4>
-                            <p class="text-sm text-gray-500">Atualizado em 15/03/2023</p>
-                        </div>
+                        <p class="text-gray-600 mb-4"><?php echo $config['descricao']; ?></p>
+                        <a href="<?php echo $caminho_arquivo; ?>" target="_blank" class="text-red-600 font-medium hover:underline flex items-center">
+                            <i data-feather="download" class="mr-2 w-4 h-4"></i> Baixar PDF
+                        </a>
                     </div>
-                    <p class="text-gray-600 mb-4">Documento que rege a organização e funcionamento da associação.</p>
-                    <a href="#" class="text-red-600 font-medium hover:underline flex items-center">
-                        <i data-feather="download" class="mr-2 w-4 h-4"></i> Baixar PDF
-                    </a>
-                </div>
-                <div class="document-card bg-white p-6 rounded-lg shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-start mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i data-feather="clipboard" class="text-blue-600"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-semibold">Regimento Interno</h4>
-                            <p class="text-sm text-gray-500">Atualizado em 10/02/2023</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">Normas que regulamentam o funcionamento interno do hospital.</p>
-                    <a href="#" class="text-red-600 font-medium hover:underline flex items-center">
-                        <i data-feather="download" class="mr-2 w-4 h-4"></i> Baixar PDF
-                    </a>
-                </div>
-                <div class="document-card bg-white p-6 rounded-lg shadow-md transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-start mb-4">
-                        <div class="bg-green-100 p-3 rounded-full mr-4">
-                            <i data-feather="award" class="text-green-600"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-semibold">Certificado de Entidade Beneficente</h4>
-                            <p class="text-sm text-gray-500">Válido até 31/12/2024</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">Certificação que comprova o status de entidade beneficente.</p>
-                    <a href="#" class="text-red-600 font-medium hover:underline flex items-center">
-                        <i data-feather="download" class="mr-2 w-4 h-4"></i> Baixar PDF
-                    </a>
-                </div>
+                <?php
+                    endif;
+                endforeach;
+                ?>
             </div>
+            <?php if (empty($arquivos_institucionais)): ?>
+                <p class="text-center text-gray-600 mt-6">Nenhum documento institucional encontrado.</p>
+            <?php endif; ?>
         </section>
 
         <section id="prestacoes-de-contas" class="mt-16">
             <?php
             // Define o diretório base para as prestações de contas
-            $diretorio = 'dados-transparencia/'; 
+            $diretorio = 'public/dados-transparencia/'; 
 
             // Lê os anos disponíveis
             $anos = scandir($diretorio);
@@ -149,7 +149,6 @@
                 '09' => 'Setembro', '10' => 'Outubro', '11' => 'Novembro', '12' => 'Dezembro'
             ];
             ?>
-
             <h3 class="text-2xl font-bold text-gray-800 mb-6">Prestações de Contas</h3>
             
             <div class="flex flex-col md:flex-row items-center gap-4 mb-8">
@@ -176,9 +175,8 @@
                 $arquivos = array_filter($arquivos, function($item) {
                     return pathinfo($item, PATHINFO_EXTENSION) === 'pdf';
                 });
-                sort($arquivos); // Ordena os arquivos em ordem crescente
+                sort($arquivos);
                 ?>
-
                 <div class="bg-white shadow rounded-lg p-6">
                     <?php if (empty($arquivos)): ?>
                         <p class="text-gray-600 text-center">Nenhum arquivo encontrado para este ano.</p>
@@ -219,19 +217,14 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">AHBM Hospital</h3>
-                     <a 
-                         href="https://www.google.com/maps?q=Av.+José+Bonifácio,+382+-+Centro,+Maracaí+-+SP,+19840-000" 
-                         target="_blank" 
-                         rel="noopener noreferrer" 
-                         class="text-gray-300 hover:underline flex items-start"
-                     >
-                         <i data-feather="map-pin" class="mr-2 mt-1 h-4 w-4"></i>
-                         <span>
-                             Av. José Bonifácio, 382 - Centro<br>
-                             Maracaí - SP<br>
-                             CEP: 19840-000
-                         </span>
-                     </a>
+                    <a href="https://www.google.com/maps?q=Av.+José+Bonifácio,+382+-+Centro,+Maracaí+-+SP,+19840-000" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:underline flex items-start">
+                        <i data-feather="map-pin" class="mr-2 mt-1 h-4 w-4"></i>
+                        <span>
+                            Av. José Bonifácio, 382 - Centro<br>
+                            Maracaí - SP<br>
+                            CEP: 19840-000
+                        </span>
+                    </a>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contato</h3>
@@ -241,7 +234,7 @@
                         </a>
                     </p>
                     <p class="text-gray-300 mb-2">
-                         <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
+                        <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
                             <i data-feather="mail" class="mr-2 h-4 w-4"></i> provedoria@ahbm.com.br
                         </a>
                     </p>

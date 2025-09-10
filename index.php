@@ -105,8 +105,8 @@
                     </div>
                 </div>
                 
-                <a href="/sobre" class="inline-flex items-center text-red-600 font-medium">
-                    Saiba mais sobre nós <i data-feather="arrow-right" class="ml-2"></i>
+                <a href="/servicos" class="inline-flex items-center text-red-600 font-medium">
+                    Saiba mais sobre serviços <i data-feather="arrow-right" class="ml-2"></i>
                 </a>
             </div>
             
