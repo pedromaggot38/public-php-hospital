@@ -43,8 +43,8 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="/" class="text-red-600 font-medium">Início</a>
                 <a href="/sobre" class="text-gray-600 hover:text-red-600">Sobre</a>
-                <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
-                <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a>
+                <!-- <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
+                <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a> -->
                 <a href="/servicos" class="text-gray-600 hover:text-red-600">Serviços</a>
                 <a href="/transparencia" class="text-gray-600 hover:text-red-600">Transparência</a>
                 <a href="/contato" class="text-gray-600 hover:text-red-600">Contato</a>
@@ -68,9 +68,6 @@
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">Cuidando da saúde de Maracaí e região desde 1977</h1>
             <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Oferecemos atendimento humanizado e tecnologia de ponta para toda a comunidade.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="/servicos" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition">Nossos Serviços</a>
-            </div>
         </div>
     </section>
 
@@ -104,29 +101,9 @@
                         <p class="text-gray-600">Agilidade e precisão nos resultados com nosso laboratório de análises clínicas.</p>
                     </div>
                 </div>
-                
-                <a href="/servicos" class="inline-flex items-center text-red-600 font-medium">
-                    Saiba mais sobre serviços <i data-feather="arrow-right" class="ml-2"></i>
-                </a>
             </div>
             
             <div class="lg:w-1/3" data-aos="fade-left">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                        <i data-feather="bell" class="mr-2 text-red-600"></i> Últimas Notícias
-                    </h2>
-                    
-                    <div id="news-container" class="space-y-4">
-                        <div class="text-center py-8">
-                            <i data-feather="loader" class="animate-spin mx-auto text-gray-400" width="24" height="24"></i>
-                        </div>
-                    </div>
-                    
-                    <a href="noticias" class="mt-6 inline-flex items-center text-red-600 font-medium">
-                        Ver todas as notícias <i data-feather="arrow-right" class="ml-2"></i>
-                    </a>
-                </div>
-
                 <div class="bg-white p-6 rounded-lg shadow-md mt-8" data-aos="fade-left" data-aos-delay="100">
                     <h3 class="text-xl font-bold text-gray-800 mb-4">Horário de Funcionamento</h3>
                     <ul class="space-y-2">
@@ -151,48 +128,58 @@
                     </a>
                     <a ></a>
                 </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i data-feather="bell" class="mr-2 text-red-600"></i> Últimas Notícias
+                    </h2>
+                    
+                    <div id="news-container" class="space-y-4">
+                        <div class="text-center py-8">
+                            <i data-feather="loader" class="animate-spin mx-auto text-gray-400" width="24" height="24"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- <a href="noticias" class="mt-6 inline-flex items-center text-red-600 font-medium">
+                        Ver todas as notícias <i data-feather="arrow-right" class="ml-2"></i>
+                    </a> -->
+                </div>
             </div>
         </div>
 
         <section class="py-16 mt-8 bg-white rounded-lg shadow-md" data-aos="fade-up">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-800">Nossa Estrutura e Tecnologia</h2>
-                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Investimos constantemente em uma infraestrutura moderna para oferecer o melhor diagnóstico e tratamento.</p>
+                    <h2 class="text-3xl font-bold text-gray-800">Outros Serviços</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Conheça algumas das especialidades e atendimentos que oferecemos à comunidade.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <img src="https://placehold.co/600x400/e2e8f0/64748b?text=Estrutura+Moderna" alt="Estrutura do Hospital" class="rounded-lg shadow-lg w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="flex-shrink-0 bg-red-100 p-4 rounded-full mb-4">
+                            <i data-feather="plus-square" class="text-red-600" width="32" height="32"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Consulta com Ortopedista</h3>
+                        <p class="text-gray-600">Especialistas em ortopedia para avaliar e tratar traumas e fraturas.</p>
                     </div>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-100 p-3 rounded-full">
-                                <i data-feather="camera" class="text-red-600"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-800">Diagnóstico por Imagem</h3>
-                                <p class="text-gray-600 mt-1">Equipamentos de ponta como Tomografia Computadorizada e Ultrassonografia garantem diagnósticos precisos e rápidos.</p>
-                            </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="flex-shrink-0 bg-red-100 p-4 rounded-full mb-4">
+                            <i data-feather="monitor" class="text-red-600" width="32" height="32"></i>
                         </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 bg-red-100 p-3 rounded-full">
-                                <i data-feather="shield" class="text-red-600"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-800">Centro Cirúrgico Avançado</h3>
-                                <p class="text-gray-600 mt-1">Salas equipadas para realizar procedimentos de diversas complexidades com máxima segurança para o paciente.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                             <div class="flex-shrink-0 bg-red-100 p-3 rounded-full">
-                                <i data-feather="home" class="text-red-600"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold text-gray-800">Apartamentos Confortáveis</h3>
-                                <p class="text-gray-600 mt-1">Leitos e apartamentos projetados para oferecer um ambiente tranquilo e acolhedor para a recuperação dos pacientes.</p>
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Exames Anatomopatológicos</h3>
+                        <p class="text-gray-600">Análise detalhada de amostras para diagnósticos precisos.</p>
                     </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <div class="flex-shrink-0 bg-red-100 p-4 rounded-full mb-4">
+                            <i data-feather="activity" class="text-red-600" width="32" height="32"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Tococardiografia</h3>
+                        <p class="text-gray-600">Monitoramento da saúde fetal durante a gravidez.</p>
+                    </div>
+                </div>
+                <div class="mt-12 text-center" data-aos="fade-up">
+                    <a href="/servicos" class="inline-block bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-full transition-colors duration-300">
+                        Saiba mais sobre serviços
+                    </a>
                 </div>
             </div>
         </section>
@@ -203,7 +190,7 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">AHBM Hospital</h3>
-                     <a 
+                    <a 
                         href="https://www.google.com/maps?q=Av.+José+Bonifácio,+382+-+Centro,+Maracaí+-+SP,+19840-000" 
                         target="_blank" 
                         rel="noopener noreferrer" 
@@ -225,7 +212,7 @@
                         </a>
                     </p>
                     <p class="text-gray-300 mb-2">
-                         <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
+                        <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
                             <i data-feather="mail" class="mr-2 h-4 w-4"></i> provedoria@ahbm.com.br
                         </a>
                     </p>
@@ -237,8 +224,8 @@
                     <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
                         <li><a href="/sobre" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
-                        <li><a href="/noticias" class="text-gray-300 hover:text-white">Notícias</a></li>
-                        <li><a href="/medicos" class="text-gray-300 hover:text-white">Médicos</a></li>
+                        <!-- <li><a href="/noticias" class="text-gray-300 hover:text-white">Notícias</a></li>
+                        <li><a href="/medicos" class="text-gray-300 hover:text-white">Médicos</a></li> -->
                         <li><a href="/servicos" class="text-gray-300 hover:text-white">Serviços</a></li>
                         <li><a href="/transparencia" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
                         <li><a href="/contato" class="text-gray-300 hover:text-white">Contato</a></li>
@@ -254,6 +241,7 @@
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p>© <?php echo date("Y"); ?> AHBM Hospital de Maracaí. Todos os direitos reservados.</p>
+                <p class="text-sm mt-2">Desenvolvido por <a href="https://www.linkedin.com/in/pedrosanches38/" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-white hover:underline">Pedro Sanches</a></p>
             </div>
         </div>
     </footer>

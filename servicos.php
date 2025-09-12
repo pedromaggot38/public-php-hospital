@@ -100,8 +100,8 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="/" class="text-gray-600 hover:text-red-600">Início</a>
                 <a href="/sobre" class="text-gray-600 hover:text-red-600">Sobre</a>
-                <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
-                <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a>
+                <!-- <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
+                <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a> -->
                 <a href="/servicos" class="text-red-600 font-medium">Serviços</a>
                 <a href="/transparencia" class="text-gray-600 hover:text-red-600">Transparência</a>
                 <a href="/contato" class="text-gray-600 hover:text-red-600">Contato</a>
@@ -150,7 +150,7 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">AHBM Hospital</h3>
-                     <a 
+                    <a 
                         href="https://www.google.com/maps?q=Av.+José+Bonifácio,+382+-+Centro,+Maracaí+-+SP,+19840-000" 
                         target="_blank" 
                         rel="noopener noreferrer" 
@@ -172,7 +172,7 @@
                         </a>
                     </p>
                     <p class="text-gray-300 mb-2">
-                         <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
+                        <a href="mailto:provedoria@ahbm.com.br" class="flex items-center hover:underline">
                             <i data-feather="mail" class="mr-2 h-4 w-4"></i> provedoria@ahbm.com.br
                         </a>
                     </p>
@@ -184,8 +184,8 @@
                     <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
                         <li><a href="/sobre" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
-                        <li><a href="/noticias" class="text-gray-300 hover:text-white">Notícias</a></li>
-                        <li><a href="/medicos" class="text-gray-300 hover:text-white">Médicos</a></li>
+                        <!-- <li><a href="/noticias" class="text-gray-300 hover:text-white">Notícias</a></li>
+                        <li><a href="/medicos" class="text-gray-300 hover:text-white">Médicos</a></li> -->
                         <li><a href="/servicos" class="text-gray-300 hover:text-white">Serviços</a></li>
                         <li><a href="/transparencia" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
                         <li><a href="/contato" class="text-gray-300 hover:text-white">Contato</a></li>
@@ -201,6 +201,7 @@
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                 <p>© <?php echo date("Y"); ?> AHBM Hospital de Maracaí. Todos os direitos reservados.</p>
+                <p class="text-sm mt-2">Desenvolvido por <a href="https://www.linkedin.com/in/pedrosanches38/" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-white hover:underline">Pedro Sanches</a></p>
             </div>
         </div>
     </footer>
