@@ -54,7 +54,8 @@ if ($artigo) {
     <title><?php echo $artigo ? htmlspecialchars($artigo->title) : 'Notícia'; ?> - AHBM Hospital de Maracaí</title>
     
     <link rel="icon" type="image/x-icon" href="/public/logo.svg">
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script> 
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="./dist/style.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
