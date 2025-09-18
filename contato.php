@@ -53,13 +53,13 @@
             </button>
         </div>
         <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
-            <a href="/" class="block py-2 text-red-600">Início</a>
+            <a href="/" class="block py-2 text-gray-600">Início</a>
             <a href="/sobre" class="block py-2 text-gray-600">Sobre</a>
-            <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
-            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a>
+            <!-- <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
+            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a> -->
             <a href="/servicos" class="block py-2 text-gray-600">Serviços</a>
             <a href="/transparencia" class="block py-2 text-gray-600">Transparência</a>
-            <a href="/contato" class="block py-2 text-gray-600">Contato</a>
+            <a href="/contato" class="block py-2 text-red-600">Contato</a>
         </div>
     </header>
 

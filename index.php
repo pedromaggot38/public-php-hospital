@@ -57,8 +57,8 @@
         <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
             <a href="/" class="block py-2 text-red-600">Início</a>
             <a href="/sobre" class="block py-2 text-gray-600">Sobre</a>
-            <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
-            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a>
+            <!-- <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
+            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a> -->
             <a href="/servicos" class="block py-2 text-gray-600">Serviços</a>
             <a href="/transparencia" class="block py-2 text-gray-600">Transparência</a>
             <a href="/contato" class="block py-2 text-gray-600">Contato</a>
@@ -130,7 +130,7 @@
                     <a ></a>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <!-- <div class="bg-white p-6 rounded-lg shadow-md">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                         <i data-feather="bell" class="mr-2 text-red-600"></i> Últimas Notícias
                     </h2>
@@ -141,10 +141,10 @@
                         </div>
                     </div>
                     
-                    <!-- <a href="noticias" class="mt-6 inline-flex items-center text-red-600 font-medium">
+                     <a href="noticias" class="mt-6 inline-flex items-center text-red-600 font-medium">
                         Ver todas as notícias <i data-feather="arrow-right" class="ml-2"></i>
-                    </a> -->
-                </div>
+                    </a> 
+                </div>-->
             </div>
         </div>
 
@@ -317,10 +317,10 @@
     } catch (error) {
         console.error('Error fetching news:', error);
         newsContainer.innerHTML = `<p class="text-red-500">Não foi possível carregar as notícias.</p>`;
+        }
     }
-}
             
-            fetchNews();
+        fetchNews();
         });
     </script>
 </body>
