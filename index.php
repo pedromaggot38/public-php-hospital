@@ -124,8 +124,7 @@
                     </a>
                     <a ></a>
                 </div>
-
-                </div>
+            </div>
         </div>
 
         <section class="py-16 mt-8 bg-white rounded-lg shadow-md" data-aos="fade-up">
