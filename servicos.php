@@ -99,11 +99,11 @@
                 </a>
             </div>
             <nav class="hidden md:flex space-x-8">
-                <a href="/" class="block py-2 text-gray-600">Início</a>
+                <a href="/" class="text-gray-600 hover:text-red-600">Início</a>
                 <a href="/sobre" class="text-gray-600 hover:text-red-600">Sobre</a>
                 <!-- <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
                 <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a> -->
-                <a href="/servicos" class="block py-2 text-red-600">Serviços</a>
+                <a href="/servicos" class="text-red-600 font-medium">Serviços</a>
                 <a href="/transparencia" class="text-gray-600 hover:text-red-600">Transparência</a>
                 <a href="/contato" class="text-gray-600 hover:text-red-600">Contato</a>
             </nav>
@@ -112,11 +112,11 @@
             </button>
         </div>
         <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
-            <a href="/" class="block py-2 text-red-600">Início</a>
+            <a href="/" class="block py-2 text-gray-600">Início</a>
             <a href="/sobre" class="block py-2 text-gray-600">Sobre</a>
-            <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
-            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a>
-            <a href="/servicos" class="block py-2 text-gray-600">Serviços</a>
+            <!-- <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
+            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a> -->
+            <a href="/servicos" class="block py-2 text-red-600">Serviços</a>
             <a href="/transparencia" class="block py-2 text-gray-600">Transparência</a>
             <a href="/contato" class="block py-2 text-gray-600">Contato</a>
         </div>

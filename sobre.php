@@ -34,7 +34,7 @@
                 </a>
             </div>
             <nav class="hidden md:flex space-x-8">
-                <a href="/" class="block py-2 text-gray-600">Início</a>
+                <a href="/" class="text-gray-600 hover:text-red-600">Início</a>
                 <a href="/sobre" class="text-red-600 font-medium">Sobre</a>
                 <!-- <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
                 <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a> -->
@@ -47,7 +47,7 @@
             </button>
         </div>
         <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
-            <a href="/" class="block py-2 text-red-600">Início</a>
+            <a href="/" class="block py-2 text-gray-600">Início</a>
             <a href="/sobre" class="block py-2 text-red-600">Sobre</a>
             <!-- <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
             <a href="/medicos" class="block py-2 text-gray-600">Médicos</a> -->
