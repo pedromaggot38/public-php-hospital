@@ -161,7 +161,7 @@
                         <span>
                             Av. José Bonifácio, 382 - Centro<br>
                             Maracaí - SP<br>
-                            CEP: 19840-000
+                            CEP: 19840-037
                         </span>
                     </a>
                 </div>
@@ -217,7 +217,7 @@
             },
             {
                 title: "Consulta com Ortopedista",
-                description: "Especialistas em ortopedia estão disponíveis para avaliar e tratar traumas e fraturas. Utilizamos técnicas avançadas de diagnóstico por imagem e tratamentos personalizados para garantir a melhor recuperação possível.",
+                description: "Temos especialista para avaliar e tratar apenas casos de traumas e fraturas.",
                 image: "/servicos/ortopedista.jpg",
                 reverse: true,
             },
@@ -237,26 +237,26 @@
 
         const medicalExams = [
             {
-                title: "Exames Radiográficos",
-                description: "Oferecemos exames de radiografia com tecnologia de ponta para diagnósticos precisos e rápidos. Nossos profissionais garantem a realização dos exames com cuidado e precisão.",
+                title: "Exames Radiográficos (Diagnóstico por Imagem)",
+                description: "Realizamos radiografias que garantem diagnósticos precisos e rápidos. Atualmente não oferecemos serviços de Ultrassom (USG) e Tomografia.",
                 image: "/servicos/radiografia.jpg",
                 reverse: false,
             },
             {
                 title: "Eletrocardiograma (ECG)",
-                description: "Realizamos exames de eletrocardiograma para avaliar a atividade elétrica do coração. Este exame é essencial para o diagnóstico de diversas condições cardíacas.",
+                description: "Contamos com serviços de telemedicina que avaliam os eletrocardiogramas e fornecem laudos em tempo hábil para um diagnóstico ágil e eficiente.",
                 image: "/servicos/eletrocardiograma-ecg.jpg",
                 reverse: true,
             },
             {
                 title: "Exames Laboratoriais",
-                description: "Nosso laboratório está equipado para realizar uma ampla gama de exames laboratoriais. Oferecemos resultados precisos e rápidos, fundamentais para o diagnóstico e monitoramento de condições de saúde.",
+                description: "Temos serviços terceirizados com equipamentos de ponta, que oferecem resultados rápidos e confiáveis para diversas análises clínicas.",
                 image: "/servicos/laboratoriais.jpg",
                 reverse: false,
             },
             {
                 title: "Exames Anatomopatológicos",
-                description: "Oferecemos serviços de exames anatomopatológicos, essenciais para o diagnóstico de diversas condições médicas. Nossos patologistas garantem uma análise detalhada e precisa.",
+                description: "Disponibilizamos serviços terceirizados com patologistas qualificados para a análise de amostras e tecidos, auxiliando em diagnósticos complexos.",
                 image: "/servicos/anatomopatologico.png",
                 reverse: true,
             },

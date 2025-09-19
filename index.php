@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AHB Maracaí</title>
     <link rel="icon" type="image/x-icon" href="/public/logo.svg">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link href="./dist/style.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -44,8 +43,6 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="/" class="text-red-600 font-medium">Início</a>
                 <a href="/sobre" class="text-gray-600 hover:text-red-600">Sobre</a>
-                <!-- <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
-                <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a> -->
                 <a href="/servicos" class="text-gray-600 hover:text-red-600">Serviços</a>
                 <a href="/transparencia" class="text-gray-600 hover:text-red-600">Transparência</a>
                 <a href="/contato" class="text-gray-600 hover:text-red-600">Contato</a>
@@ -57,8 +54,6 @@
         <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
             <a href="/" class="block py-2 text-red-600">Início</a>
             <a href="/sobre" class="block py-2 text-gray-600">Sobre</a>
-            <!-- <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
-            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a> -->
             <a href="/servicos" class="block py-2 text-gray-600">Serviços</a>
             <a href="/transparencia" class="block py-2 text-gray-600">Transparência</a>
             <a href="/contato" class="block py-2 text-gray-600">Contato</a>
@@ -89,7 +84,7 @@
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <i data-feather="heart" class="text-red-600 mb-4" width="32" height="32"></i>
                         <h3 class="text-xl font-semibold mb-2">Cardiologia</h3>
-                        <p class="text-gray-600">Unidade de Cardiologia com equipamentos modernos e profissionais experientes.</p>
+                        <p class="text-gray-600">Serviços de telemedicina que avaliam eletrocardiogramas e fornecem laudos em tempo hábil.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <i data-feather="scissors" class="text-red-600 mb-4" width="32" height="32"></i>
@@ -98,8 +93,8 @@
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <i data-feather="clipboard" class="text-red-600 mb-4" width="32" height="32"></i>
-                        <h3 class="text-xl font-semibold mb-2">Laboratório Próprio</h3>
-                        <p class="text-gray-600">Agilidade e precisão nos resultados com nosso laboratório de análises clínicas.</p>
+                        <h3 class="text-xl font-semibold mb-2">Exames Laboratoriais</h3>
+                        <p class="text-gray-600">Serviços terceirizados com equipamentos modernos para resultados rápidos e precisos.</p>
                     </div>
                 </div>
             </div>
@@ -130,22 +125,7 @@
                     <a ></a>
                 </div>
 
-                <!-- <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                        <i data-feather="bell" class="mr-2 text-red-600"></i> Últimas Notícias
-                    </h2>
-                    
-                    <div id="news-container" class="space-y-4">
-                        <div class="text-center py-8">
-                            <i data-feather="loader" class="animate-spin mx-auto text-gray-400" width="24" height="24"></i>
-                        </div>
-                    </div>
-                    
-                     <a href="noticias" class="mt-6 inline-flex items-center text-red-600 font-medium">
-                        Ver todas as notícias <i data-feather="arrow-right" class="ml-2"></i>
-                    </a> 
-                </div>-->
-            </div>
+                </div>
         </div>
 
         <section class="py-16 mt-8 bg-white rounded-lg shadow-md" data-aos="fade-up">
@@ -160,14 +140,14 @@
                             <i data-feather="plus-square" class="text-red-600" width="32" height="32"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Consulta com Ortopedista</h3>
-                        <p class="text-gray-600">Especialistas em ortopedia para avaliar e tratar traumas e fraturas.</p>
+                        <p class="text-gray-600">Atendimento especializado para avaliação e tratamento exclusivo de traumas e fraturas.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
                         <div class="flex-shrink-0 bg-red-100 p-4 rounded-full mb-4">
                             <i data-feather="monitor" class="text-red-600" width="32" height="32"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Exames Anatomopatológicos</h3>
-                        <p class="text-gray-600">Análise detalhada de amostras para diagnósticos precisos.</p>
+                        <p class="text-gray-600">Serviços terceirizados com patologistas para análise detalhada de amostras.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
                         <div class="flex-shrink-0 bg-red-100 p-4 rounded-full mb-4">
@@ -201,7 +181,7 @@
                         <span>
                             Av. José Bonifácio, 382 - Centro<br>
                             Maracaí - SP<br>
-                            CEP: 19840-000
+                            CEP: 19840-037
                         </span>
                     </a>
                 </div>
@@ -225,8 +205,6 @@
                     <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
                         <li><a href="/sobre" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
-                        <!-- <li><a href="/noticias" class="text-gray-300 hover:text-white">Notícias</a></li>
-                        <li><a href="/medicos" class="text-gray-300 hover:text-white">Médicos</a></li> -->
                         <li><a href="/servicos" class="text-gray-300 hover:text-white">Serviços</a></li>
                         <li><a href="/transparencia" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
                         <li><a href="/contato" class="text-gray-300 hover:text-white">Contato</a></li>
@@ -261,66 +239,68 @@
                 const menu = document.getElementById('mobile-menu');
                 menu.classList.toggle('hidden');
             });
-
+            
+            /*
             async function fetchNews() {
-    const newsContainer = document.getElementById('news-container');
-    try {
-        const response = await fetch('https://tcc-v2-seven.vercel.app/api/v1/public/articles?limit=5');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const result = await response.json();
-        
-        const news = result.data.articles;
-        newsContainer.innerHTML = '';
-        
-        if (news.length === 0) {
-            newsContainer.innerHTML = '<p class="text-gray-500">Nenhuma notícia encontrada.</p>';
-            return;
-        }
+                const newsContainer = document.getElementById('news-container');
+                try {
+                    const response = await fetch('https://tcc-v2-seven.vercel.app/api/v1/public/articles?limit=5');
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const result = await response.json();
+                    
+                    const news = result.data.articles;
+                    newsContainer.innerHTML = '';
+                    
+                    if (news.length === 0) {
+                        newsContainer.innerHTML = '<p class="text-gray-500">Nenhuma notícia encontrada.</p>';
+                        return;
+                    }
 
-        news.forEach(item => {
-            let imageElement;
-            if (item.imageUrl) {
-                imageElement = `<img src="${item.imageUrl}" alt="${item.imageDescription || 'Imagem da notícia'}" class="w-full h-32 object-cover">`;
-            } else {
-                imageElement = `
-                    <div class="w-full h-32 bg-gray-200 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image text-gray-400">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                            <polyline points="21 15 16 10 5 21"></polyline>
-                        </svg>
-                    </div>
-                `;
-            }
+                    news.forEach(item => {
+                        let imageElement;
+                        if (item.imageUrl) {
+                            imageElement = `<img src="${item.imageUrl}" alt="${item.imageDescription || 'Imagem da notícia'}" class="w-full h-32 object-cover">`;
+                        } else {
+                            imageElement = `
+                                <div class="w-full h-32 bg-gray-200 flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image text-gray-400">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                        <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                        <polyline points="21 15 16 10 5 21"></polyline>
+                                    </svg>
+                                </div>
+                            `;
+                        }
 
-            const newsCard = document.createElement('div');
-            newsCard.className = 'news-card bg-white rounded-lg transition cursor-pointer hover:bg-gray-100 shadow-md overflow-hidden';
-            newsCard.innerHTML = `
-                ${imageElement}
-                <div class="p-4">
-                    <h3 class="font-semibold text-gray-800 mb-2 line-clamp-2">${item.title}</h3>
-                    <p class="text-sm text-gray-600 mb-3 line-clamp-3">${item.subtitle || ''}</p>
-                    <p class="text-xs text-gray-500">${new Date(item.createdAt).toLocaleDateString('pt-BR')}</p>
-                </div>
-            `;
-            
-            newsCard.addEventListener('click', () => {
-                if (item.slug) {
-                    window.location.href = `/noticias/${item.slug}`;
+                        const newsCard = document.createElement('div');
+                        newsCard.className = 'news-card bg-white rounded-lg transition cursor-pointer hover:bg-gray-100 shadow-md overflow-hidden';
+                        newsCard.innerHTML = `
+                            ${imageElement}
+                            <div class="p-4">
+                                <h3 class="font-semibold text-gray-800 mb-2 line-clamp-2">${item.title}</h3>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-3">${item.subtitle || ''}</p>
+                                <p class="text-xs text-gray-500">${new Date(item.createdAt).toLocaleDateString('pt-BR')}</p>
+                            </div>
+                        `;
+                        
+                        newsCard.addEventListener('click', () => {
+                            if (item.slug) {
+                                window.location.href = `/noticias/${item.slug}`;
+                            }
+                        });
+                        newsContainer.appendChild(newsCard);
+                    });
+
+                } catch (error) {
+                    console.error('Error fetching news:', error);
+                    newsContainer.innerHTML = `<p class="text-red-500">Não foi possível carregar as notícias.</p>`;
                 }
-            });
-            newsContainer.appendChild(newsCard);
-        });
-
-    } catch (error) {
-        console.error('Error fetching news:', error);
-        newsContainer.innerHTML = `<p class="text-red-500">Não foi possível carregar as notícias.</p>`;
-        }
-    }
+            }
             
-        fetchNews();
+            fetchNews();
+            */
         });
     </script>
 </body>

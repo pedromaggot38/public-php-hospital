@@ -120,7 +120,7 @@
                         <p class="text-gray-600 mb-4">
                             Av. José Bonifácio, 382 - Centro<br>
                             Maracaí - SP<br>
-                            CEP: 19840-000
+                            CEP: 19840-037
                         </p>
                         <ul class="space-y-4 text-gray-600">
                             <li class="flex items-center">
@@ -164,7 +164,7 @@
                         <span>
                             Av. José Bonifácio, 382 - Centro<br>
                             Maracaí - SP<br>
-                            CEP: 19840-000
+                            CEP: 19840-037
                         </span>
                     </a>
                 </div>

@@ -228,7 +228,7 @@
                         <span>
                             Av. José Bonifácio, 382 - Centro<br>
                             Maracaí - SP<br>
-                            CEP: 19840-000
+                            CEP: 19840-037
                         </span>
                     </a>
                 </div>

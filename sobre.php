@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - AHB Maracaí</title>
     <link rel="icon" type="image/x-icon" href="/public/logo.svg">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link href="./dist/style.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -36,8 +35,6 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="/" class="text-gray-600 hover:text-red-600">Início</a>
                 <a href="/sobre" class="text-red-600 font-medium">Sobre</a>
-                <!-- <a href="/noticias" class="text-gray-600 hover:text-red-600">Notícias</a>
-                <a href="/medicos" class="text-gray-600 hover:text-red-600">Médicos</a> -->
                 <a href="/servicos" class="text-gray-600 hover:text-red-600">Serviços</a>
                 <a href="/transparencia" class="text-gray-600 hover:text-red-600">Transparência</a>
                 <a href="/contato" class="text-gray-600 hover:text-red-600">Contato</a>
@@ -49,8 +46,6 @@
         <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
             <a href="/" class="block py-2 text-gray-600">Início</a>
             <a href="/sobre" class="block py-2 text-red-600">Sobre</a>
-            <!-- <a href="/noticias" class="block py-2 text-gray-600">Notícias</a>
-            <a href="/medicos" class="block py-2 text-gray-600">Médicos</a> -->
             <a href="/servicos" class="block py-2 text-gray-600">Serviços</a>
             <a href="/transparencia" class="block py-2 text-gray-600">Transparência</a>
             <a href="/contato" class="block py-2 text-gray-600">Contato</a>
@@ -154,6 +149,13 @@
                                 <li><strong>Domingo:</strong> 7h às 11h</li>
                             </ul>
                         </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-semibold text-lg mb-2">Consulta com Ortopedista</h3>
+                            <p class="text-gray-600">Atendimento para traumas e fraturas.</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1 mt-1">
+                                <li><strong>Terças-feiras:</strong> às 10h</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -228,7 +230,7 @@
                         <span>
                             Av. José Bonifácio, 382 - Centro<br>
                             Maracaí - SP<br>
-                            CEP: 19840-000
+                            CEP: 19840-037
                         </span>
                     </a>
                 </div>
@@ -252,8 +254,6 @@
                     <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
                         <li><a href="/sobre" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
-                        <!-- <li><a href="/noticias" class="text-gray-300 hover:text-white">Notícias</a></li>
-                        <li><a href="/medicos" class="text-gray-300 hover:text-white">Médicos</a></li> -->
                         <li><a href="/servicos" class="text-gray-300 hover:text-white">Serviços</a></li>
                         <li><a href="/transparencia" class="text-gray-300 hover:text-white">Portal da Transparência</a></li>
                         <li><a href="/contato" class="text-gray-300 hover:text-white">Contato</a></li>
